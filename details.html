@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Details</title>
+</head>
+<body>
+
+<h1>Property Details Page</h1>
+
+<script>
+    // Read property ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    document.body.innerHTML += `<h2>Showing Details for Property #${id}</h2>`;
+</script>
+
+</body>
+</html>

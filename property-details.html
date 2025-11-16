@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Details</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .card { width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        img { width: 100%; border-radius: 10px; }
+    </style>
+</head>
+
+<body>
+
+    <h2>Property Details</h2>
+    <div id="details"></div>
+
+<script>
+    // Get ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+
+    // Property data (you can move this to backend later)
+    const properties = {
+        1: {
+            title: "2 BHK House for Rent in Mehsana",
+            owner: "Mr. Sanjeev Joshi",
+            price: "₹ 25,000 / Year",
+            img: "c:/Users/mp477/OneDrive/MEHUL PERSONAL/CP-1/img-1.jpg",
+            features: "2 Bedrooms · 2 Bathrooms · Bachelor / Family"
+        },
+        2: {
+            title: "4 BHK House for Rent in Mehsana",
+            owner: "Mr. Jayesh Patel",
+            price: "₹ 35,000 / Year",
+            img: "c:/Users/mp477/OneDrive/MEHUL PERSONAL/CP-1/img-2.jpg",
+            features: "4 Bedrooms · 4 Bathrooms · Bachelor / Family"
+        }
+    };
+
+    // Display selected property
+    const details = properties[id];
+
+    document.getElementById("details").innerHTML = `
+        <div class="card">
+            <img src="${details.img}">
+            <h3>${details.title}</h3>
+            <p><b>Owner:</b> ${details.owner}</p>
+            <p><b>Price:</b> ${details.price}</p>
+            <p><b>Features:</b> ${details.features}</p>
+        </div>
+    `;
+</script>
+
+</body>
+</html>

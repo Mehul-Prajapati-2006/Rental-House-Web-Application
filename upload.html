@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Property</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        form { 
+            width: 400px; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+            margin: auto;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Upload New Property</h2>
+
+<form id="uploadForm">
+
+    <label>Property Title</label>
+    <input type="text" id="title" required>
+
+    <label>Owner Name</label>
+    <input type="text" id="owner" required>
+
+    <label>Price (per year)</label>
+    <input type="text" id="price" required>
+
+    <label>Property Image</label>
+    <input type="file" id="image" accept="image/*" required>
+
+    <label>Bedrooms</label>
+    <input type="number" id="bed" required>
+
+    <label>Bathrooms</label>
+    <input type="number" id="bath" required>
+
+    <button type="submit">Submit Property</button>
+</form>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Prepare property data
+    const property = {
+        title: document.getElementById("title").value,
+        owner: document.getElementById("owner").value,
+        price: document.getElementById("price").value,
+        bed: document.getElementById("bed").value,
+        bath: document.getElementById("bath").value,
+        image: URL.createObjectURL(document.getElementById("image").files[0])
+    };
+
+    // Save to localStorage
+    let properties = JSON.parse(localStorage.getItem("properties")) || [];
+    properties.push(property);
+    localStorage.setItem("properties", JSON.stringify(properties));
+
+    alert("Property Uploaded Successfully!");
+
+    // redirect back to home page
+    window.location.href = "index.html";
+});
+</script>
+
+</body>
+</html>

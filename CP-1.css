@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    overflow: visible !important;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: white;
+    box-shadow: 0 2px 4px #0001;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 28px;
+}
+
+/* FILTERS */
+.filters {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background: white;
+    padding: 5px 10px;
+    box-shadow: 0 0 4px #0002;
+}
+
+.search-box input {
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+.search-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* PROPERTY CARD */
+.properties {
+    margin: 20px;
+}
+
+.property-card {
+    display: flex;
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+.property-card img {
+    width: 140px;
+    height: 110px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.info {
+    flex: 1;
+}
+
+.owner {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.features span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.side {
+    text-align: right;
+}
+
+.details {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.price {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Upload Button */
+.upload-btn-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.upload-btn {
+    padding: 12px 30px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
